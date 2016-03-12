@@ -4,10 +4,18 @@ defmodule FileInfo.Mixfile do
   def project do
     [app: :file_info,
      version: "0.0.1",
+     description: "Get MIME-type of a file by its magic number (linux only)",
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     package: package]
+  end
+
+  defp package do
+    [maintainers: ["Norbert \"NobbZ\" Melzer"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/NobbZ/file_info"}]
   end
 
   # Configuration for the OTP application
