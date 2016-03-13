@@ -21,5 +21,8 @@ defmodule FileInfo do
     |> Enum.into(%{})
   end
 
-  defp to_tuple([path, mime]), do: {path, String.strip(mime)}
+  defp to_tuple([path, mime]) do
+    mime = mime |> String.strip |> FileInfo.Mime.parse!
+    {path, mime}
+  end
 end
