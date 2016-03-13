@@ -35,7 +35,9 @@ defmodule FileInfo.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:credo, "~> 0.3.7", only: :dev},
+    [{:mimetype_parser, "~> 0.1.2"},
+
+     {:credo, "~> 0.3.7", only: :dev},
      {:inch_ex, "~> 0.5.1", only: :dev}]
   end
 end
