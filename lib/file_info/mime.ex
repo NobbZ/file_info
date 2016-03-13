@@ -3,6 +3,11 @@ defmodule FileInfo.Mime do
   defstruct type: "", subtype: "", arguments: %{}
   @type t :: %__MODULE__{type: String.t, subtype: String.t, arguments: %{}}
 
+  @doc """
+  Parses a given `String` into a MIME-struct.
+
+  Returs either `{:ok, mime_struct}` or `{:error, reason}`.
+  """
   def parse(mime_string) do
     case MimetypeParser.parse mime_string do
       {:ok, {type, subtype, args}} -> {:ok, %__MODULE__{type:      type,
@@ -12,6 +17,9 @@ defmodule FileInfo.Mime do
     end
   end
 
+  @doc """
+  Throwing version of `parse/1`.
+  """
   def parse!(mime_string) do
     [{type, subtype, args}] = MimetypeParser.parse! mime_string
     %__MODULE__{type: type, subtype: subtype, arguments: args}
