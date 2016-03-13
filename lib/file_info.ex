@@ -8,7 +8,7 @@ defmodule FileInfo do
   Retrieves informations about one or multiple files, using the `file` command
   line tool which is shipped with most linux distributions.
   """
-  @spec get_info(Path.t | [Path.t]) :: %{Path.t => String.t}
+  @spec get_info(Path.t | [Path.t]) :: %{Path.t => FileInfo.Mime.t}
   def get_info(names)
   def get_info(name) when is_binary(name), do: get_info([name])
   def get_info(names) when is_list(names) do
