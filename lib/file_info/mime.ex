@@ -35,6 +35,7 @@ defimpl String.Chars, for: FileInfo.Mime do
   end
 
   def to_string(%MIME{type: type, subtype: subtype, arguments: args}) do
-    "#{type}/#{subtype}---ARGS CURRENTLY NOT SUPPORTED (#{args})---"
+    args = args |> Enum.map(fn {k, v} -> "#{k}=#{v}" end) |> Enum.join(";")
+    "#{type}/#{subtype};#{args}"
   end
 end
