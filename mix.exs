@@ -41,8 +41,8 @@ defmodule FileInfo.Mixfile do
   defp deps do
     [
       {:mimetype_parser, "~> 0.1.2"},
-      {:ex_doc, "~> 0.11", only: :dev},
-      {:earmark, "~> 0.1", only: :dev},
+      {:ex_doc, "~> 0.19", only: :dev},
+      {:earmark, "~> 1.0", only: :dev},
       {:credo, "~> 0.3.7", only: :dev},
       {:inch_ex, "~> 0.5.1", only: :dev}
     ]
