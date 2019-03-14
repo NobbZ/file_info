@@ -21,9 +21,14 @@ otp_release:
   - 21
 
 matrix:
-  include:
+  exclude:
     - elixir: 1.0.5
-      otp_release: [17, 18]
+      otp_release: 19
+    - elixir: 1.0.5
+      otp_release: 20
+    - elixir: 1.0.5
+      otp_release: 21
+
 
 before_install:
   - kerl list releases
