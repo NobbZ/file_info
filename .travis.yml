@@ -20,8 +20,14 @@ otp_release:
   - 20
   - 21
 
+env:
+  - MIX_ENV=prod
+  - MIX_ENV=dev
+
 matrix:
   exclude:
+    - elixir: 1.0.5
+      env: MIX_ENV=dev
     - elixir: 1.0.5
       otp_release: 19
     - elixir: 1.0.5
