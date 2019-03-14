@@ -25,6 +25,9 @@ matrix:
     - elixir: 1.0.5
       otp_release: [17, 18]
 
+before_install:
+  - kerl list releases
+
 before_script:
   - mix deps.get
   - mix deps.compile
