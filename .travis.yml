@@ -15,10 +15,10 @@ elixir:
 
 otp_release:
   - 17.5
-  - 18
-  - 19
-  - 20
-  - 21
+  - 18.3
+  - 19.3
+  - 20.1
+  - 21.2
 
 env:
   - MIX_ENV=prod
@@ -29,14 +29,15 @@ matrix:
     - elixir: 1.0.5
       env: MIX_ENV=dev
     - elixir: 1.0.5
-      otp_release: 19
+      otp_release: 19.3
     - elixir: 1.0.5
-      otp_release: 20
+      otp_release: 20.1
     - elixir: 1.0.5
-      otp_release: 21
+      otp_release: 21.2
 
 
 before_install:
+  - kerl update releases
   - kerl list releases
 
 before_script:
