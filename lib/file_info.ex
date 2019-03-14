@@ -25,9 +25,13 @@ defmodule FileInfo do
 
   defmacrop trim_strip(arg) do
     if Version.match?(System.version(), ">= 1.3.0") do
-      quote do String.trim(unquote(arg)) end
+      quote do
+        String.trim(unquote(arg))
+      end
     else
-      quote do String.strip(unquote(arg)) end
+      quote do
+        String.strip(unquote(arg))
+      end
     end
   end
 
