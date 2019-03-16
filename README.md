@@ -1,20 +1,5 @@
 # FileInfo
 
-**TODO: Add description**
+TThis project has moved to gitlab.com:
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add file_info to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:file_info, "~> 0.0.1"}]
-        end
-
-  2. Ensure file_info is started before your application:
-
-        def application do
-          [applications: [:file_info]]
-        end
-
+https://gitlab.com/NobbZ/file_info
